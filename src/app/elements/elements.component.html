@@ -1,0 +1,28 @@
+<div class="col-md-8 col-lg-9 products">
+  <div class="row">
+
+    <div class="col-sm-4 col-lg-4" *ngFor="let item of elem">
+      <div class="product">
+        <div class="product-img">
+          <img [src]="item.linkImg" alt="">
+        </div>
+        <div>
+          <div class="row">
+            <p class="product-title">
+              <a href="#">{{item.name}}</a>
+            </p>
+          </div>
+          <div class="row">
+            <p class="product-desc">{{item.description}}</p>
+          </div>
+          <div class="row">
+            <p class="product-price">Price: ${{item.price}}</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

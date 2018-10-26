@@ -1,0 +1,44 @@
+<div class="container , bg">
+
+  <div class="row , head">
+
+  </div>
+
+  <div class="row , info">
+    <div class=" col-lg-6 col-md-12 , info_bar1">
+
+    </div>
+
+    <div class="col-lg-6 col-md-12 , info_bar2">
+
+    </div>
+  </div>
+  <div class="row , category">
+    <div class="col-lg-offset-1 col-lg-10 , block_bg">
+      <div class="row">
+
+        <nav *ngFor="let item  of navigate">
+          <a routerLink="/{{item.linkRouter}}">
+            <div class="col-lg-3 col-md-6 , category_block">
+              <div class="product-img">
+                <img class="img" [src]="item.linkImg" alt="">
+              </div>
+              <div>
+                <p class="product-title">
+                  <a href="#">{{item.name}}</a>
+                </p>
+              </div>
+            </div>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row , footer">
+
+  </div>
+</div>
+
+
