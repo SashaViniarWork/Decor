@@ -21,6 +21,7 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AddComponent} from './add/add.component';
 import {GetElementsService} from './get-elements.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireDatabaseModule
   ],
-  providers: [GetElementsService],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }, GetElementsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
