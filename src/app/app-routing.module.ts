@@ -9,6 +9,11 @@ import {HotelComponent} from './hotel/hotel.component';
 import {PelmentsComponent} from './pelments/pelments.component';
 import {TulleComponent} from './tulle/tulle.component';
 import {AddComponent} from './add/add.component';
+import {AllComponent} from './all/all.component';
+import {ContactComponent} from './contact/contact.component';
+import {CurtainsComponent} from './curtains/curtains.component';
+import {AboutComponent} from './about/about.component';
+import {AboutElemComponent} from './about-elem/about-elem.component';
 
 const routes: Routes = [
   {
@@ -51,6 +56,26 @@ const routes: Routes = [
   {
     path: 'addSomeToken',
     component: AddComponent
+  },
+  {
+    path: 'all',
+    component: AllComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
+  },
+  {
+    path: 'curtains',
+    component: CurtainsComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  },
+  {
+    path: 'element/:id',
+    component: AboutElemComponent
   },
 ];
 

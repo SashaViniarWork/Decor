@@ -1,3 +1,18 @@
-<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+<!--<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">-->
 
-<router-outlet></router-outlet>
+
+<div class="mother-grid">
+  <div class="container">
+    <div class="temp-padd">
+
+      <app-nav-bar></app-nav-bar>
+
+      <div id="top" class="callbacks_container">
+
+        <router-outlet></router-outlet>
+      </div>
+      <div class="clearfix"></div>
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="molli" id = "our_t">
+  <div class="molli-top">
+    <span class="line-x"> </span>
+    <span class="line-y"> </span>
+    <h3>MORBI INTERDUM MOLLIS</h3>
+    <P>Vestibulum auctor dapibus nequ</P>
+  </div>
+  <ul class="rslides" id="slider4">
+    <li>
+      <div class="molli-grids" *ngFor="let item of navigate" routerLink="/{{item.linkRouter}}">
+        <img [src]="item.linkImg" alt=""/>
+        <div class="molli-text">
+          <h4>{{item.name}}</h4>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="clearfix"></div>

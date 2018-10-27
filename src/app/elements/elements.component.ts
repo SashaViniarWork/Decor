@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {Element} from '../elem.model';
 import {GetElementsService} from '../get-elements.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-elements',
@@ -12,7 +13,9 @@ export class ElementsComponent implements OnInit {
   @Input() type: any;
   elemList: Observable<Element[]>;
   elem: any = [];
-  constructor(public fire: GetElementsService) {
+  p: number = 1;
+
+  constructor(public fire: GetElementsService, public router: Router) {
     this.elemList = this.fire.getElemList()
       .snapshotChanges()
       .map(
@@ -23,14 +26,22 @@ export class ElementsComponent implements OnInit {
         });
 
     this.elemList.subscribe(res => {
-      for (let i = 0; i< res.length; i++) {
+      for (let i = 0; i < res.length; i++) {
         if (res[i].type === this.type) {
           this.elem.push(res[i]);
         }
       }
-    })
+    });
 
   }
+
+  NavToElem(key, item) {
+    localStorage.setItem('name', item.name);
+    localStorage.setItem('price', item.price);
+    localStorage.setItem('key', item.key);
+    this.router.navigate(['/element', key]);
+  }
+
 
   ngOnInit() {
   }

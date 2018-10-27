@@ -12,7 +12,6 @@ import {AccessoriesComponent} from './accessories/accessories.component';
 import {HotelComponent} from './hotel/hotel.component';
 import {BedComponent} from './bed/bed.component';
 import {BathrobeComponent} from './bathrobe/bathrobe.component';
-import {NavelementsComponent} from './navelements/navelements.component';
 import {ElementsComponent} from './elements/elements.component';
 import {FIREBASE_CONFIG} from './fire.cred';
 import {AngularFireModule} from 'angularfire2';
@@ -22,6 +21,14 @@ import {AddComponent} from './add/add.component';
 import {GetElementsService} from './get-elements.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { FooterComponent } from './footer/footer.component';
+import { AllComponent } from './all/all.component';
+import { ContactComponent } from './contact/contact.component';
+import { CurtainsComponent } from './curtains/curtains.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { AboutComponent } from './about/about.component';
+import { AboutElemComponent } from './about-elem/about-elem.component';
 
 @NgModule({
   declarations: [
@@ -34,11 +41,18 @@ import {HashLocationStrategy, LocationStrategy} from '@angular/common';
     HotelComponent,
     BedComponent,
     BathrobeComponent,
-    NavelementsComponent,
     ElementsComponent,
-    AddComponent
+    AddComponent,
+    NavBarComponent,
+    FooterComponent,
+    AllComponent,
+    ContactComponent,
+    CurtainsComponent,
+    AboutComponent,
+    AboutElemComponent
   ],
   imports: [
+    NgxPaginationModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

@@ -1,44 +1,28 @@
-<div class="container , bg">
-
-  <div class="row , head">
-
-  </div>
-
-  <div class="row , info">
-    <div class=" col-lg-6 col-md-12 , info_bar1">
-
-    </div>
-
-    <div class="col-lg-6 col-md-12 , info_bar2">
-
-    </div>
-  </div>
-  <div class="row , category">
-    <div class="col-lg-offset-1 col-lg-10 , block_bg">
-      <div class="row">
-
-        <nav *ngFor="let item  of navigate">
-          <a routerLink="/{{item.linkRouter}}">
-            <div class="col-lg-3 col-md-6 , category_block">
-              <div class="product-img">
-                <img class="img" [src]="item.linkImg" alt="">
-              </div>
-              <div>
-                <p class="product-title">
-                  <a href="#">{{item.name}}</a>
-                </p>
-              </div>
-            </div>
-          </a>
-        </nav>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="row , footer">
-
+<div class="banner">
+  <!--<img src="images/logo.png" alt=""/>-->
+  <h3>Corem ipsum</h3>
+  <h2>SIT AMET VIVAMUS</h2>
+  <div class="banner-button">
+    <a href="#">More info</a>
   </div>
 </div>
-
+<div class="molli" id = "our_t">
+  <div class="molli-top">
+    <span class="line-x"> </span>
+    <span class="line-y"> </span>
+    <h3>MORBI INTERDUM MOLLIS</h3>
+    <P>Vestibulum auctor dapibus nequ</P>
+  </div>
+  <ul class="rslides" id="slider4">
+    <li>
+      <div class="molli-grids" *ngFor="let item of navigate" routerLink="/{{item.linkRouter}}">
+        <img [src]="item.linkImg" alt=""/>
+        <div class="molli-text">
+          <h4>{{item.name}}</h4>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="clearfix"></div>
 

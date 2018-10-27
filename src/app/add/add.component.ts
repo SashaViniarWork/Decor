@@ -18,15 +18,18 @@ export class AddComponent implements OnInit {
 
   constructor(public fire: GetElementsService) {
   }
-  addNote(elem: Element ) {
+
+  addNote(elem: Element) {
     this.fire.addElem(elem).then(ref => {
-      alert("Add");
+      alert('Add');
     });
 
   }
+
   changetype(type) {
     localStorage.setItem('type', type);
   }
+
   ngOnInit() {
   }
 

@@ -13,6 +13,11 @@ export class MainComponent implements OnInit {
       linkImg: 'https://images.ua.prom.st/613971795_w640_h640_vual_belaya_prestizh.jpg'
     },
     {
+      name: 'Штори',
+      linkRouter: 'curtains',
+      linkImg: 'https://images.ua.prom.st/613971795_w640_h640_vual_belaya_prestizh.jpg'
+    },
+    {
       name: 'Готові комлекти',
       linkRouter: 'complement',
       linkImg: 'https://images.ua.prom.st/613971795_w640_h640_vual_belaya_prestizh.jpg'
