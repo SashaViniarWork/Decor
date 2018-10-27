@@ -12,6 +12,12 @@ export class AddComponent implements OnInit {
     name: '',
     price: '',
     linkImg: '',
+    linkImg1: '',
+    linkImg2: '',
+    colection: '',
+    article: '',
+    create: '',
+    width: '',
     description: '',
     type: ''
   };

@@ -29,7 +29,7 @@ import { CurtainsComponent } from './curtains/curtains.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { AboutComponent } from './about/about.component';
 import { AboutElemComponent } from './about-elem/about-elem.component';
-
+import { SliderModule } from 'ngx-slider';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +55,7 @@ import { AboutElemComponent } from './about-elem/about-elem.component';
     NgxPaginationModule,
     BrowserModule,
     AppRoutingModule,
+    SliderModule,
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(FIREBASE_CONFIG),

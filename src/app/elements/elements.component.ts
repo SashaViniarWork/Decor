@@ -38,6 +38,14 @@ export class ElementsComponent implements OnInit {
   NavToElem(key, item) {
     localStorage.setItem('name', item.name);
     localStorage.setItem('price', item.price);
+    localStorage.setItem('colection', item.colection);
+    localStorage.setItem('article', item.article);
+    localStorage.setItem('width', item.width);
+    localStorage.setItem('create', item.create);
+    localStorage.setItem('link1', item.linkImg);
+    localStorage.setItem('link2', item.linkImg1);
+    localStorage.setItem('link3', item.linkImg2);
+    localStorage.setItem('description', item.description);
     localStorage.setItem('key', item.key);
     this.router.navigate(['/element', key]);
   }
